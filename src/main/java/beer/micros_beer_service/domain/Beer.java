@@ -6,9 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.security.Timestamp;
@@ -29,11 +27,11 @@ public class Beer {
   @Version
   private Long version;
 
-  @CreationTimestamp
+  //@CreationTimestamp
   @Column(updatable = false)
   private Timestamp createdDate;
 
-  @UpdateTimestamp
+  //@UpdateTimestamp
   private Timestamp lastModifiedDate;
   private String beerName;
   private String beerStyle;
@@ -43,4 +41,5 @@ public class Beer {
   private BigDecimal price;
   private Integer minOnHand;
   private Integer quantityToBrew;
+
 }

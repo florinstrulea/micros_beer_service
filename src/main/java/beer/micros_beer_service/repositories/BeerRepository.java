@@ -1,9 +1,10 @@
 package beer.micros_beer_service.repositories;
 
-import beer.micros_beer_service.domain.Beer;
-import org.springframework.data.repository.PagingAndSortingRepository;
-
 import java.util.UUID;
 
-public interface BeerRepository extends PagingAndSortingRepository<Beer, UUID> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import beer.micros_beer_service.domain.Beer;
+
+public interface BeerRepository extends JpaRepository<Beer, UUID> {
 }
